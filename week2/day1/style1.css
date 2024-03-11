@@ -1,0 +1,23 @@
+p {
+    display: inline-block;
+    color: white;
+    background-color: blue;
+    
+   
+
+}
+
+p:hover {
+    color: black;
+    background-color: blueviolet;
+    text-decoration: underline;
+    animation: rotation 8s infinite linear;
+     rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+    }
+}
