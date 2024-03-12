@@ -1,0 +1,23 @@
+
+.salam {
+    font-size: 80px;
+    color: blueviolet;
+    border-radius: 20%;
+}
+@media only screen and (max-width: 900px)  {
+    .salam {
+        color: blue;
+        font-size: 60px;
+        border-radius: 80%;
+    }
+}
+
+
+@media only screen and (max-width: 600px)  {
+    .salam {
+        border-radius: 50%;
+        font-size: 40px;
+        color: red;
+    }
+}
+
