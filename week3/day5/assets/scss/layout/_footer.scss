@@ -1,0 +1,32 @@
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // justify-content: center;
+    // margin-left: 10%;
+    // margin-right: 10%;
+    background-color: #212529;
+    max-width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    padding-left: 138px;
+    padding-right: 138px;
+    height: 80px;
+}
+.list{
+    a{
+        color: white;
+        border-bottom: 1px solid white;
+        margin: 6px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .footer_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}

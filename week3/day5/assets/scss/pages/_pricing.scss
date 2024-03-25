@@ -1,0 +1,157 @@
+.pricing_section{
+    padding-top: 12%;
+    background-color: rgb(248,249,250);
+}
+.pricing_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pricing_text{
+    padding-bottom: 60px;
+}
+.text_pricing{
+    font-size: 45px;
+    font-weight: 700;
+    font-family: system-ui;
+}
+
+.pricing_plan{
+    font-size: 22px;
+    font-family: system-ui;
+    color: #6c757d;
+    margin-top: 10px;
+    text-align: center;
+}
+.pricing_cards{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+.pricing_card1{
+    border: 1px solid rgb(199, 196, 196);
+    border-radius: 8px;
+    background-color: white;
+    width: 350px;
+    height: 565px;
+    display: flex;
+    padding: 45px;
+    // justify-content: center;
+    flex-direction: column;
+    // align-items: center;
+    // margin-bottom: 90px;
+
+    p{
+        margin-bottom: 10px;
+
+        
+    }
+    .free{
+            font-size: 16px;
+            font-weight: 700;
+            font-family: system-ui;
+            color: #6c757d;
+        }
+        
+        .dollar{
+            font-size: 60px;
+            font-weight: 700;
+            font-family: system-ui;
+            gap: 4px;
+
+        }
+        .month{
+            font-size: 20px;
+            color: #6c757d;
+            font-family: system-ui;
+            
+        }
+        .users{
+            font-size: 18px;
+            font-weight: 700;
+            font-family: system-ui;
+            
+            
+        }
+        .storage{
+            font-size: 18px;
+            font-weight: 400;
+            font-family: system-ui;
+
+        }
+        .public{
+            font-size: 18px;
+            font-weight: 400;
+            font-family: system-ui;
+        }
+        .community{
+            font-size: 18px;
+            font-weight: 400;
+            font-family: system-ui;
+        }
+        .private{
+            font-size: 18px;
+            font-weight: 400;
+            font-family: system-ui;
+            color: #6c757d;
+        }
+        .support{
+            font-size: 18px;
+            font-weight: 400;
+            font-family: system-ui;
+            color: #6c757d;
+        }
+        .domain{
+            font-size: 18px;
+            font-weight: 400;
+            font-family: system-ui;
+            color: #6c757d;
+        }
+        .reports{
+            font-size: 18px;
+            font-weight: 400;
+            font-family: system-ui;
+            color: #6c757d;
+        }
+        
+}
+[type="choose_button"]{
+    width: 280px;
+    height: 45px;
+    background-color: white;
+    border: 1px solid #0d6efd;
+    color: #0d6efd;
+    font-size: 18px;
+    font-family: system-ui;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+[type="choose_button"]:hover{
+    background-color: #0d6efd;
+    color: white;
+    
+}
+
+[type="button2"]{
+    width: 280px;
+    height: 45px;
+    background-color: #0d6efd;
+    border: 1px solid #0d6efd;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: system-ui;
+    cursor: pointer;
+    border-radius: 8px;
+}
+[type="button2"]:hover{
+    background-color: #0b5ed7;
+    color: white;
+    
+}

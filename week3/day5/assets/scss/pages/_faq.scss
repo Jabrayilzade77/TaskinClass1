@@ -1,0 +1,27 @@
+.faq_section{
+    padding-top: 12%;
+    background-color: rgb(255, 255, 255);
+}
+.faq_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.faq_text{
+    padding-bottom: 60px;
+}
+.text_faq{
+    font-size: 45px;
+    font-weight: 700;
+    font-family: system-ui;
+}
+
+.faq_support{
+    font-size: 22px;
+    font-family: system-ui;
+    color: #6c757d;
+    margin-top: 10px;
+    text-align: center;
+}

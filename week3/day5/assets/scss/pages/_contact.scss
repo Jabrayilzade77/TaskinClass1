@@ -1,0 +1,137 @@
+.contact_section{
+    margin-top: 110px;
+    background-color: rgb(248,249,250);
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 50px;
+    
+}
+.contact_section1{
+    margin-top: 110px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 50px;
+}
+.contact_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #000000;
+}
+
+.img_msg{
+    margin-top: 40px;
+    width: 65px;
+    height: 65px;
+    
+}
+.message_head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.get_touch{
+    font-size: 38px;
+    font-weight: 700;
+    color: #212529;
+    font-family: system-ui;
+    margin-bottom: 10px;
+}
+
+.we_love{
+    font-size: 20px;
+    font-weight: 450;
+    font-family: system-ui;
+    color: #6c757d;
+}
+
+.form_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    .submit_btn{
+        width: 500px;
+        color: rgb(255, 255, 255);
+        background-color: #0d6efd;
+        font-family: system-ui;
+        opacity: 0.65;
+        font-size: 22px;
+        height: 50px;
+        border-radius: 8px;
+        // margin: auto 10px;
+    }
+}
+
+[action="email"]{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    input{
+        width: 500px;
+        height: 70px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        border: 1px solid rgb(204, 200, 200);
+        font-size: 18px;
+        font-family: system-ui;
+        color: #000000;
+        padding: 15px;
+    }
+    textarea{
+        width: 500px;
+        height: 170px;
+        border-radius: 8px;
+        padding: 15px;
+        border: 1px solid rgb(204, 200, 200);
+        font-size: 18px;
+        font-family: system-ui;
+        color: #000000;
+    }
+    [placeholder="Email address"]{
+        color: #000000;
+    }
+}
+
+.contact_cards{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.chat_img{
+    max-width: 65px;
+}
+.chat_us{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: system-ui;
+}
+.chat_live{
+    font-size: 16px;
+  font-family: system-ui;
+  font-weight: 400;
+  color: #212529;
+  width: 220px;
+  line-height: 1.5;
+}
+
+@media screen and (max-width:768px) {
+    .submit_btn{
+        width: 450px;
+        height: 40px;
+    }
+}
