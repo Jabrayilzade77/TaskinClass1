@@ -1,4 +1,5 @@
 .contact_section{
+    max-width: 800px;
     margin-top: 110px;
     background-color: rgb(248,249,250);
     margin-left: 10%;
@@ -13,6 +14,8 @@
     padding-bottom: 50px;
 }
 .contact_container{
+    max-width: 800px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +31,8 @@
     
 }
 .message_head{
+    max-width: 800px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,6 +57,8 @@
 }
 
 .form_container{
+    max-width: 800px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,7 +66,8 @@
     
 
     .submit_btn{
-        width: 500px;
+        max-width: 500px;
+        width: 90%;
         color: rgb(255, 255, 255);
         background-color: #0d6efd;
         font-family: system-ui;
@@ -72,6 +80,8 @@
 }
 
 [action="email"]{
+    max-width: 800px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,7 +89,8 @@
     margin-bottom: 20px;
 
     input{
-        width: 500px;
+        max-width: 500px;
+        width: 90%;
         height: 70px;
         border-radius: 8px;
         margin-bottom: 15px;
@@ -90,8 +101,9 @@
         padding: 15px;
     }
     textarea{
-        width: 500px;
-        height: 170px;
+        max-width: 500px;
+        width: 90%;
+        min-height: 150px;
         border-radius: 8px;
         padding: 15px;
         border: 1px solid rgb(204, 200, 200);
