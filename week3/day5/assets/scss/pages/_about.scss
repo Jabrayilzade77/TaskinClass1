@@ -190,3 +190,13 @@ padding-top: 50px;
         flex-wrap: 1 1;
     }
 }
+
+@media screen and (max-width:996px) {
+    .full_img_text1{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}

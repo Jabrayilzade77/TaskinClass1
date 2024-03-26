@@ -98,35 +98,26 @@
 position: relative; 
 display: inline-block; }
 
-.dropdown .dropbtn {
-    font-size: 155px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 20px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
+
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    box-sizing: content-box;
+    min-width: 260px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
-    float: none;
+    height: 50px;
     color: black;
-    // padding: 12px 16px;
-    text-decoration: none;
     align-items: center;
     gap: 4px;
+    padding: 3px 10px;
     display: flex;
-    text-align: left;
+    text-align: center;
 }
 
 .dropdown-content a:hover {
@@ -137,11 +128,7 @@ display: inline-block; }
     display: block;
 }
 
-/* Hover olmadan da alt menünün görünmesini sağlama */
-.dropdown:focus-within .dropdown-content {
-    display: block;
-}
-  
+
   @media screen and (max-width: 800px) {
     .portfolio {
       color: #ffffff;
