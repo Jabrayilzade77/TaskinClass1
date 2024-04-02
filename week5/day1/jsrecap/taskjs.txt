@@ -1,0 +1,49 @@
+1) javascript  html faylina 2 cur yazila biler : internal external  <script> tegi daxilinda ve script src kimi
+2) js de 3 cur deyisen teyin ede bilerik let const var  : const yeniden deyer ala  bilmez
+3) js de operatorlar a ornek  && ||     !     
+4) bezi qisa yazilislar  a= a+1 a++ b=b+5  b+=5
+5) javascriptde 8 datatype var : 
+1. String , 
+2. Number , 
+3. Boolean , 
+4. Undefined , 
+5. Null , 
+6. Object(Object datatype da ozunde 3 yere bolunur: object, array, date) , 
+7.Symbol , 
+8. Bigint(Number kimidir ama daha boyuk deyerleri saxlamaga komek edir
+6) sert operatorlari : if , else if , else , switch (eger sert operatoruna aid olan skopkada sert odenirse skopka daxilindeki sert icra olunur )
+switch case de is else kimi isleyir lakin sert daxilinde daha deqiq deyerlerle isleyirikse switch yox eger mueyyen araliqdaki ededlerle isleyirikse if else istifade edirik
+bundan elave tek setirli if else ucun bir qisaltma olan ternary istifade ede bilirik (sert ? console.log() :console.log();)
+7) javascriptde donguler :for, while, do while, for..in , for..of
+(while ve do while arasindaki ferq do while de serte baxilmadan kod bir defe isleyir daha sonra serte baxilir),
+(for in elementin indeksi kimi baxir for of ise elementin ozune baxir 
+bundan elave dongu daxilinde mueyyen sertde dovrden cixmaq yeni dovru  sonlandirmaq ucun break operatorundan istifade edirik , 
+serte uygun elementi ve ya emeli oturmek pass kecmek ucunse continue operatoru istifade edilir
+8) operatorlar : Arithmetic operators(+,-,*,/,%,** ve s.), 
+Assignment operators(=, +=,-=,%=,/=,*= ve s.) ,
+Comparison operators(==,===,!=,!==,>,<,>=,<=), 
+String operators(>,<,+=,+ ve s.), 
+Logical operators(&&(and),||(or),!(not)), 
+Bitwise Operators(&,|,~,<<,>>), Ternary Operators(?) ,
+Type Operators(typeof,instanceof)
+9) funksiyalar mueyyen emeliyyatlari yerine yetirmekle kod tekrarinin qarsisini alir .
+3cur funksiya var decleration function,expression function, arrow function 
+(bunlardan hosting mentiqine uygun olani decleration dur) 
+funksiyanin parametri ve argumenti olur .
+parametr funksiya ilkin yarananda aldigi deyerler, 
+argument ise funksiya cagirlanda ona oturulen deyerlerdir.
+funksiya deyer qaytarirsa onun return type i vardir deyer qaytarmirsa console.log ile ekrana cixara bilerik. 
+...rest ve ...spred ozellikleri ve vardir ki esasen array ve funksiyalarda istifade olunur
+rest massivin ve ya string in elementlerini birlesdirmek 
+spred ise ayirmaq ucundur
+10)muxtelif tipden olan deyerleri saxlamaq ucun massivlerden istifade olunur .
+massivlerin elemenlerine muraciet etmek ucun indexlerden istifade olunur
+indexleme 0-dan baslayir
+methods:
+array.length-(array uzunlugunu tapir), 
+toString()-(massivi stringe cevirir)
+pop()-massivin sonuncu elementini silmek
+push()- massivin sonuna element elave etmek
+shift()-massivin ilk elementini silir
+unshift()-massivin evveline element elave etmek
+concat()-massivleri birlesdirmek ucun 
