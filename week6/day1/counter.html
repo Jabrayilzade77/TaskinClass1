@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <button id="minus" style="background-color: white">-</button>
+        <div id="say"></div>
+        <button id="plus" style="background-color: white">+</button>
+    </div>
+
+
+
+    <script>
+// let counter = 0
+
+const minus = document.getElementById("minus")
+const plus = document.getElementById("plus")
+const say = document.getElementById("say")
+
+let counter =JSON.parse(localStorage.getItem("value")) ||0
+say.textContent = counter
+minus.addEventListener("click",function () {
+    if(counter!==0){
+        counter-=1
+        say.textContent = counter
+    }
+    say.textContent =counter
+
+localStorage.setItem("value",JSON.stringify(counter))
+
+console.log(localStorage.getItem("counter"));
+
+if(counter===0){
+    minus.style.backgroundColor = "red"
+}
+})
+plus.addEventListener("click",function () {
+    counter++
+    say.textContent = counter
+
+    minus.style.backgroundColor = "white"
+    
+localStorage.setItem("value",JSON.stringify(counter))
+
+})
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

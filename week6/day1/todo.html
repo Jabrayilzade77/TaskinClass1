@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="" id="inp" placeholder="add">
+        <button id="btn">Add</button>
+    </form>
+    
+
+<ol id="ol">
+
+
+</ol>
+
+    <script>
+        const inp = document.getElementById("inp")
+        const btn = document.getElementById("btn")
+        const ol = document.getElementById("ol")
+        
+
+
+
+        btn.addEventListener("click",function (e) {
+            e.preventDefault()
+            const li = document.createElement("li")
+            const button = document.createElement("button")
+            const p = document.createElement("p")
+            p.textContent = inp.value
+            li.append(p,button)
+            ol.appendChild(li)
+            li.style.display = "flex"
+            button.style.width = "20px"
+            button.style.height = "20px"
+
+
+        inp.value = ""
+        })
+       
+    </script>
+</body>
+</html>

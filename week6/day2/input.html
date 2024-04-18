@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formDiv{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="formDiv">
+<form action="">
+        <label>First name
+        <input type="text" name="" id="inp1">
+
+        <label>Last name
+        <input type="text" name="" id="inp2">
+        <input type="text" name="" id="inp3">
+        <input type="text" name="" id="inp4">
+        <input type="text" name="" id="inp5">
+
+
+        <button id="btn">Submit</button>
+    </form>
+    </div>
+    
+
+
+    <script>
+        const inp1 = document.getElementById("inp1")
+        const inp2 = document.getElementById("inp2")
+        const inp3 = document.getElementById("inp3")
+        const inp4 = document.getElementById("inp4")
+        const inp5 = document.getElementById("inp5")
+
+        const btn = document.getElementById("btn")
+        const obj = localStorage.getItem("key") ?  JSON.parse(localStorage.getItem("key") ): {
+            inp1:"",
+            inp2:"",
+            inp3:"",
+            inp4:"",
+            inp5:""
+
+        }
+        inp1.value = obj.inp1
+        inp2.value = obj.inp2
+        inp3.value = obj.inp3
+        inp4.value = obj.inp4
+        inp5.value = obj.inp5
+
+       
+        // inp1.addEventListener("keyup",function () {
+        //     obj.inp1 =  inp1.value
+        //     localStorage.setItem("key",JSON.stringify(obj))
+        // })
+        // inp2.addEventListener("keyup",function () {
+        //     obj.inp2 =  inp2.value
+        //     localStorage.setItem("key",JSON.stringify(obj))
+        // })
+        // inp3.addEventListener("keyup",function () {
+        //     obj.inp3 =  inp3.value
+        //     localStorage.setItem("key",JSON.stringify(obj))
+        // })
+        // inp4.addEventListener("keyup",function () {
+        //     obj.inp4 =  inp4.value
+        //     localStorage.setItem("key",JSON.stringify(obj))
+        // })
+        // inp5.addEventListener("keyup",function () {
+        //     obj.inp5 =  inp5.value
+        //     localStorage.setItem("key",JSON.stringify(obj))
+        // })
+        
+for (let i = 0; i < obj.length; i++) {
+    obj.inp[i] = inp[i].value
+    localStorage.setItem("key",JSON.stringify(obj))
+    
+}
+
+
+
+
+
+    </script>
+</body>
+</html>

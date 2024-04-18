@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contains {
+            display: flex;
+            gap: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contains">
+        <button id="minus">-</button>
+        <div id="counter"></div>
+        <button id="plus">+</button>
+    </div>
+
+    <script>
+        const minus = document.getElementById("minus")
+        const plus = document.getElementById("plus")
+        const counter = document.getElementById("counter")
+        let count = JSON.parse(localStorage.getItem("value")) || 0
+        counter.textContent = count
+        minus.addEventListener("click", function () {
+            count=count-1
+            counter.textContent = count
+
+            localStorage.setItem("value", JSON.stringify(count))
+
+        })
+        plus.addEventListener("click", function () {
+            count=count+1
+
+            counter.textContent = count
+            localStorage.setItem("value", JSON.stringify(count))
+
+        })
+    </script>
+</body>
+
+</html>

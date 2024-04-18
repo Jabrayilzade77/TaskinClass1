@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   fetch("https://northwind.vercel.app/api/categories", { method: "delete",})
+      //     .then((res) => res.json())
+      //     .then((data) => console.table(data))
+
+      //     async function getCategory() {
+      //       const res = await fetch(  "https://northwind.vercel.app/api/categories",{method:"delete"} );
+      //       const data = await res.json();
+      //       console.table(data);
+      //     };
+
+      //   getCategory();
+
+      //   fetch("https://northwind.vercel.app/api/categories", {
+      //     method: "POST",
+      //     headers: {
+      //       "Content-Type": "application/json",
+
+      //     },
+      //     body: JSON.stringify({
+      //       name: "yusif_99999",
+      //     }),
+      //   })
+      //     .then((res) => res.json())
+      //     .then((data) => console.table(data));
+
+      //   async function getCategory() {
+      //     const res = await fetch("https://northwind.vercel.app/api/categories", {
+      //       method: "POST",
+      //       headers: {
+      //         "Content-Type": "application/json",
+
+      //       },
+      //       body: JSON.stringify({
+      //         name: "yusif_99999",
+      //       }),
+      //     });
+      //     const data = await res.json();
+      //     console.table(data);
+      //   }
+
+      fetch("https://northwind.vercel.app/api/categories/12", {
+        method: "put",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: "yusif_123",
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => console.table(data));
+
+      async function getCategory() {
+        const res = await fetch(
+          "https://northwind.vercel.app/api/categories/21",
+          {
+            method: "put",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: "esed",
+            }),
+          }
+        );
+        const data = await res.json();
+        console.table(data);
+      }
+      getCategory();
+    </script>
+  </body>
+</html>

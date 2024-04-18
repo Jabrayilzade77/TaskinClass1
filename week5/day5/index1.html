@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .div_inp{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .inp{
+            height: 30px;
+            width: 140px;
+            border-radius: 5px;
+        }
+       .btn{
+        background-color: black;
+        color: white;
+        height: 40px;
+        width: 130px;
+        border-radius: 5px;
+       }
+    </style>
+</head>
+
+<body>
+<div class="div_inp">
+    <input class="inp" type="text" style="margin:10px;">
+<button class="btn">Change Color</button>
+</div>
+
+
+    <!-- <script>
+        const mainDiv = document.createElement("div")
+        document.body.appendChild(mainDiv)
+        mainDiv.className = "card"
+        mainDiv.style.width = "18rem"
+
+        const img = document.createElement("img")
+        mainDiv.appendChild(img)
+        img.setAttribute("src", "...")
+        img.className = "card-img-top"
+        img.setAttribute("alt", "...")
+
+        const secondDiv = document.createElement("div")
+        mainDiv.appendChild(secondDiv)
+
+        secondDiv.className = "card-body"
+
+        const h5 = document.createElement("h5")
+        secondDiv.appendChild(h5)
+
+        h5.className = "card-title"
+
+        h5.textContent = "Card title"
+
+
+
+        const p = document.createElement("p")
+        secondDiv.appendChild(p)
+
+        p.className = "card-text"
+
+        p.textContent = "Some quick example text to build on the card title and make up the bulk of the card's content"
+
+
+        const a = document.createElement("a")
+        secondDiv.appendChild(a)
+        a.setAttribute("href","#")
+        
+        a.classList.add("btn")
+        a.classList.add("btn-primary")
+        a.textContent ="Go somewhere"
+
+    </script> -->
+
+
+    <!-- <script>
+        const mainDiv = document.createElement("div")
+        document.body.appendChild(mainDiv)
+
+
+        const button = document.createElement("button")
+        mainDiv.appendChild(button)
+
+        button.textContent = "click me"
+
+        button.addEventListener("click", function () {
+       
+            const divs = document.createElement("div")
+            mainDiv.appendChild(divs)
+
+            divs.style.width = "100px"
+            divs.style.height = "100px"
+            divs.style.backgroundColor = "blue"
+            divs.style.margin = "10px"
+
+
+            
+          })
+    </script> -->
+
+
+    <script>
+        const btn = document.querySelector(".btn")
+        
+        const inp = document.querySelector(".inp")
+
+        btn.addEventListener("click", function () {
+            const randomColor = Math.floor(Math.random()*16777215).toString(16)
+            inp.value = "#" + randomColor 
+            document.body.style.backgroundColor = inp.value
+
+        })
+    </script>
+</body>
+
+</html>

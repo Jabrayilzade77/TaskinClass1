@@ -274,31 +274,36 @@ img {
 }
 .mountain_section1{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: space-between;
     align-items: center;
     display: block;
     flex-direction: column;
 }
 .mountain_section2{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     margin-right: 20%;
     
 }
 .mountains_1{
-    width: 500px;
-    height: 372px;
+    /* width: 500px; */
+    width: 100%;
+    /* height: 372px; */
 }
 .mountains_2{
-    width: 500px;
-    height: 372px;
+    /* width: 500px; */
+    width: 100%;
+    /* height: 372px; */
 }
 .mountains{
     background-color: #020202;
-    width: 500px;
-    height: 360px;
+    /* width: 500px; */
+    width: 100%;
+    /* height: 360px; */
     border: 1px solid black;
     display: flex;
     justify-content: center;
@@ -307,13 +312,15 @@ img {
 }
 .misty{
     background-color: #020202;
-    width: 500px;
-    height: 360px;
+    /* width: 500px; */
+    width: 100%;
+    /* height: 360px; */
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .misty_class{

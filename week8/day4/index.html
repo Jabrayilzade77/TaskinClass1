@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="start">start</button>
+    <button id="btn">stop</button>
+    <button id="reset">reset</button>
+
+
+    <div class="count">0</div>
+
+    <script>
+        const start = document.getElementById("start")
+        const btn = document.getElementById("btn")
+        const reset = document.getElementById("reset")
+        const count = document.querySelector(".count")
+
+        let araliq = 0
+        let interval
+
+        let isTrue = false
+
+  
+
+
+        start.onclick = () => {
+            if (interval) {
+                return
+            }
+            // if (!isTrue) {
+            //     return
+            // }
+            interval = setInterval(() => {
+                araliq++
+                count.textContent = araliq
+            }, 1000);
+
+        }
+
+        btn.addEventListener("click", function () {
+
+            clearInterval(interval)
+            interval= null
+            // isTrue = false
+        })
+
+        reset.onclick = () => {
+            araliq = 0
+            clearInterval(interval)
+
+            interval= null
+            // isTrue = false
+            count.textContent = araliq
+
+        }
+    </script>
+</body>
+
+</html>

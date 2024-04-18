@@ -1,0 +1,31 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #185996;
+$primary-color1: white;
+
+%message-shared {
+  border: 1px solid #d60000;
+  padding: 10px;
+  color: #333;
+}
+
+
+@mixin ortala($ortala: MiddleofthePage) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.yusif {
+  @extend %message-shared;
+}
+body {
+  background-color: $primary-color;
+  @include ortala();
+}
+
+body {
+  .yusif {
+    flex-direction: column;
+    margin-top: 100px;
+    color: $primary-color1;
+  }
+}

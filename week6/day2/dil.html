@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <button id="az">az</button>
+        <button id="en">en</button>
+        <button id="ru">ru</button>
+
+
+    </div>
+    <p class="dili_goster"></p>
+
+    <script>
+        const az = document.getElementById("az")
+        const en = document.getElementById("en")
+        const ru = document.getElementById("ru")
+
+        const dili_goster = document.querySelector(".dili_goster")
+
+        const obj = localStorage.getItem("key") ? JSON.parse(localStorage.getItem("key")) : {
+            deyer: ""
+        }
+        dili_goster.textContent = obj.deyer
+
+        az.addEventListener("click", function () {
+            dili_goster.textContent = "az"
+            obj.deyer = "az"
+            localStorage.setItem("key", JSON.stringify(obj))
+        })
+        en.addEventListener("click", function () {
+            dili_goster.textContent = "en"
+            obj.deyer = "en"
+            localStorage.setItem("key", JSON.stringify(obj))
+        })
+        ru.addEventListener("click", function () {
+            dili_goster.textContent = "ru"
+            obj.deyer = "ru"
+            localStorage.setItem("key", JSON.stringify(obj))
+        })
+    </script>
+</body>
+
+</html>

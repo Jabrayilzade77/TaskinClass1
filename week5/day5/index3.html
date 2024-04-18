@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 200px;
+        }
+        .change{
+            text-decoration: line-through;
+        }
+        #btn{
+            width: 100px;
+            height: 50px;
+            
+        }
+        .change1{
+            transform: scale(2);
+        } */
+        .bizim_h2{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 10px;
+            background-color: blue;
+            cursor: pointer;
+
+        }
+        .container{
+            margin-top: 20px;
+            border: 1px solid black;
+            min-height: 200px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+<!-- 
+    <h1 class="list_item">seher tez dur</h1>
+    <h1 class="list_item">yatagini yig</h1>
+    <h1 class="list_item">dislerini yu</h1>
+    <h1 class="list_item">yemek ye</h1>
+    <h1 class="list_item">cantani yig</h1> -->
+
+    <button id="btn1">Salamla</button>
+    <input id="inp" type="text">
+
+    <div class="container"></div>
+
+    <!-- <button id="btn2">salamla2</button> -->
+
+    <script>
+        // const list_items = document.querySelectorAll(".list_item")
+        // list_items.forEach((x) => x.onclick = () => x.classList.toggle("change"))
+        
+        // const btn1 = document.getElementById("btn1")
+        // const btn2 = document.getElementById("btn2")
+        
+        // btn1.onclick = function () {
+        //     console.log("Salam btn1 1");
+        // }
+        // btn1.onclick = function () {
+        //     console.log("Salam btn1 2");
+        // } 
+        // btn1.onclick = function () {
+        //     console.log("Salam btn1 3");
+        // }
+
+        // btn2.addEventListener("click",function () {
+        //     console.log("Salam btn2 1");
+        // })
+        // btn2.addEventListener("click",function () {
+        //     console.log("Salam btn2 2");
+        // })
+        // btn2.addEventListener("click",function () {
+        //     console.log("Salam btn2 3");
+        // })
+        
+    
+        // btn1.onclick = function () {
+        //     btn1.textContent = "Yusif"
+        // }
+       
+const btn1 = document.getElementById("btn1")
+i=1
+btn1.addEventListener("click", function () {
+    const h2 = document.createElement("h2")
+    const inp = document.getElementById("inp")
+    h2.textContent = "Salamla"
+    const container = document.querySelector(".container")
+
+    h2.textContent = inp.value
+    inp.value = ""
+    h2.classList.add("bizim_h2")
+    container.appendChild(h2)
+i++
+    h2.onclick = ()=>h2.remove()
+})
+   
+    </script>
+</body>
+</html>

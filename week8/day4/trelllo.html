@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+
+        .item {
+            width: 100px;
+            height: 40px;
+            background-color: green;
+        }
+
+        .box1,
+        .box2 {
+            max-width: 400px;
+            width: 100%;
+            min-height: 300px;
+        }
+
+        .container {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" name="" id="inp" draggable="true" placeholder="work">
+    <button id="btn">add</button>
+    <div class="container">
+        <div class="item" draggable="true"></div>
+
+        <div class="box1">
+        </div>
+        <div class="box2"></div>
+    </div>
+
+    <script>
+        const btn = document.getElementById("btn")
+        const item = document.querySelector(".item")
+        const box1 = document.querySelector(".box1")
+        const box2 = document.querySelector(".box2")
+        const inp = document.getElementById("inp")
+        // const boxs = document.querySelectorAll(".box1,.box2")
+        let memory 
+        btn.addEventListener("click", function (e) {
+            e.preventDefault()
+            const boxItem = document.createElement("div")
+            boxItem.textContent = inp.value
+            boxItem.classList.add("item")
+            boxItem.setAttribute("draggable","true")
+            box1.appendChild(boxItem)
+
+            boxItem.addEventListener("dragstart",function (e) {
+                 memory = boxItem
+            })
+        })
+        item.textContent = inp.value
+
+        box1.addEventListener("dragover", function (e) {
+            e.preventDefault()
+        })
+
+        box1.addEventListener("drop", function () {
+            box1.appendChild(memory)
+        })
+        box2.addEventListener("dragover", function (e) {
+            e.preventDefault()
+        })
+
+        box2.addEventListener("drop", function () {
+            box2.appendChild(memory)
+        })
+
+        // boxs.forEach(box => {
+        //     box.addEventListener("dragover", function (e) {
+        //         e.preventDefault()
+        //         console.log("menim uzerimdedir");
+        //     })
+        // box.addEventListener("drop", function () {
+        //     // e.preventDefault()
+        //     box.appendChild(item)
+        // })
+        // })
+
+
+
+        // item.addEventListener("dragstart", function () {
+        //     console.log("drag oluna bilirem");
+        // })
+
+
+
+        // box2.addEventListener("dragover", function (e) {
+        //     e.preventDefault()
+        //     console.log("menim uzerimdedir");
+        // })
+        // box2.addEventListener("drop", function () {
+        //     box2.appendChild(item)
+        // })
+    </script>
+</body>
+
+</html>

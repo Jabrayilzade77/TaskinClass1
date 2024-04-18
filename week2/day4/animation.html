@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+
+            perspective: 200px;
+        }
+
+        .card {
+            font-size: 2em;
+            margin: 200px auto;
+            width: 200px;
+            font-weight: bold;
+            color: black;
+            font-family: cursive;
+            animation-name: animation;
+            animation-duration: 1.5s;
+            animation-fill-mode: both;
+            animation-timing-function: linear;
+
+
+        }
+
+        @keyframes animation {
+            0% {
+                opacity: 0.9;
+                transform: scale(0.2);
+            }
+    
+                100%{
+                    transform:scale(1.5);
+                }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="card">Animation</div>
+    </div>
+</body>
+
+</html>

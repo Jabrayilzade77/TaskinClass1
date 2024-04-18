@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* .img_main{
+            width: 50%;
+        }
+        .img_header{
+            display: flex;
+         
+        }
+        .img_js1,.img_js2,.img_js3{
+            width: 33%;
+        } */
+
+        .bmw {
+            width: 20%;
+
+        }
+
+        .change1 {
+            text-decoration: line-through;
+
+        }
+
+        .change2 {
+            background-color: rgba(104, 202, 29, 0.885);
+        }
+    </style>
+</head>
+
+<body>
+   
+    <form class="form" action="">
+        <input id="inp" type="text">
+        <button id="btn">Add</button>
+        <ol class="ol">
+
+        </ol>
+    </form>
+    <div id="todoLocal"></div>
+    <script>
+        const inp = document.getElementById("inp")
+        const btn = document.getElementById("btn")
+        const form = document.querySelector(".form")
+        const ol = document.querySelector(".ol")
+
+
+
+        const local = localStorage.getItem("todoLocal")
+        let todoLocal = local ? JSON.parse(local) : [];
+
+        todoLocal.forEach((element) => createTodoItem(element, ol))
+
+
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault()
+            if (inp.value === "") {
+                return
+            }
+
+            createTodoItem(inp.value, ol)
+
+            todoLocal.push(inp.value)
+            localStorage.setItem("todoLocal", JSON.stringify(todoLocal))
+            inp.value = ""
+        })
+
+        function createTodoItem(val, parent) {
+
+            const li = document.createElement("li")
+            const p = document.createElement("p")
+            const button = document.createElement("button")
+
+            p.textContent = val
+            button.textContent = "X"
+
+
+
+            li.onclick = function () {
+                p.classList.toggle("change1")
+                li.classList.toggle("change2")
+
+            }
+            li.style.display = "flex"
+            li.style.justifyContent = "space-between"
+            li.style.gap = "20px"
+
+            li.append(p, button)
+            ol.appendChild(li)
+
+            
+
+            button.onclick = ()=>{
+                todoLocal = todoLocal.filter((x) => x!==val)
+                localStorage.setItem("todoLocal",todoLocal)
+                li.remove()
+            }
+
+        }
+    </script>
+</body>
+
+</html>

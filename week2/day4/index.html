@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+
+            perspective: 200px;
+        }
+
+        .card {
+            margin: 40px auto;
+            transform: translate(100px);
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            animation-duration: 2s;
+            animation-name: myAnimation;
+            animation-iteration-count: 4;
+
+        }
+
+        .card_parent {
+            border: 1px solid black;
+        }
+
+        .card_parent:hover {
+            background-color: yellow;
+            transform: rotateX(360deg);
+        }
+
+        @keyframes myAnimation {
+            0% {
+                background-color: red;
+                transform: translate(100px, 100px);
+            }
+
+            25% {
+                background-color: yellow;
+                transform: translate(200px, 100px);
+
+            }
+
+            50% {
+                background-color: blue;
+                transform: translate(100px, 100px);
+
+            }
+
+            75% {
+                transform: translate(100px, 100px);
+
+            }
+
+            100% {
+                background-color: red;
+                transform: translate(100px, 100px);
+
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="card_parent">
+        <div class="card"></div>
+    </div>
+
+</body>
+
+</html>
